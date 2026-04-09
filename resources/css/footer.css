@@ -1,0 +1,23 @@
+.footer-wrapper {
+    box-shadow: 0px -4px 10px rgba(140, 46, 255, 0.1);
+}
+
+
+.footer-running-line {
+    @apply whitespace-nowrap overflow-hidden;
+
+    .h1 {
+        animation: ticker 15s infinite linear;
+        @apply flex items-center justify-center min-w-fit;
+    }
+}
+
+@keyframes ticker {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,99 @@
+.btn {
+    @apply text-base cursor-pointer relative flex items-center justify-center overflow-hidden transition-all duration-300 ease-in-out;
+
+    &.md {
+        @apply px-8 py-4 rounded-5xl;
+    }
+
+    &.round {
+        @apply rounded-full p-3 w-15 h-15;
+    }
+
+    &::after {
+        content: "";
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        @apply top-px left-px absolute bg-white rounded-5xl -z-10 transition-all duration-300 ease-in-out;
+    }
+
+    &.primary {
+        @apply text-white;
+
+        &::after {
+            @apply opacity-0;
+        }
+
+        &:hover {
+            @apply text-black;
+
+            &::after {
+                @apply opacity-100;
+            }
+        }
+    }
+
+    &.secondary {
+        @apply text-black;
+
+        &::after {
+            content: "";
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            @apply top-px left-px absolute bg-white rounded-5xl -z-10;
+        }
+
+        span {
+            @apply inline-flex items-center justify-center whitespace-nowrap;
+
+            &::after {
+                content: "";
+                background: url("data:image/svg+xml; base64, PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAyNCAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgOS41SDIyTTIyIDkuNUMyMiA5LjUgMTcgNy41IDE1LjM4NDYgNS41QzEzLjc2OTIgMy41IDEyLjc2OTIgMC41IDEyLjc2OTIgMC41TTIyIDkuNUMyMiA5LjUgMTcgMTEuNSAxNS4zODQ2IDEzLjVDMTMuNzY5MiAxNS41IDEyLjc2OTIgMTguNSAxMi43NjkyIDE4LjUiIHN0cm9rZT0iIzJGMkYyRiIvPgo8L3N2Zz4K");
+                @apply ml-0 transition-all duration-300 ease-in-out w-full block overflow-hidden bg-center bg-no-repeat bg-contain max-w-0;
+                height: 18px;
+                width: 22px;
+            }
+        }
+
+        &:hover {
+            span {
+                &::after {
+                    max-width: 22px;
+                    @apply ml-2;
+                }
+            }
+        }
+    }
+
+
+
+    &:hover {
+        &::before {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &::before {
+        content: "";
+        @apply w-full absolute left-0 -z-10 transition-all duration-300 ease-in-out;
+        padding-bottom: 100%;
+        vertical-align: middle;
+        background: linear-gradient(110deg, #FEB562 10%, #F11680 55%, #8C2EFF 90%);
+    }
+
+
+}
+
+
+@media screen and (max-width: theme('screens.sm')) {
+    .btn {
+        @apply text-sm;
+
+        &.md {
+            @apply px-6 py-3 rounded-5xl;
+        }
+
+        &.round {
+            @apply w-13 h-13;
+        }
+    }
+}

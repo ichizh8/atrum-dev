@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@import './variables.css';
+@import './theme.css';
+@import './colors.css';
+@import './fonts.css';
+@import './styles.css';
+@import './typography.css';
+@import './btn.css';
+@import './approach-features-table.css';
+@import './posts.css';
+@import './our-process.css';
+@import './projects.css';
+@import './menu.css';
+@import './footer.css';
+@import './input.css';
+@import './animations.css';

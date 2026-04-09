@@ -1,0 +1,119 @@
+.approach-features-table {
+    @apply w-full;
+
+    thead {
+        th {
+            @apply uppercase text-md text-center font-normal py-5 text-white;
+        }
+    }
+
+    td,
+    th {
+        @apply relative;
+
+        span {
+            @apply relative;
+        }
+
+        &:not(:first-child) {
+            @apply py-5 px-9;
+
+            &::before {
+                content: "";
+                @apply absolute h-full top-0 bg-white border-r border-l;
+                width: calc(100% - 8px);
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                @apply left-0 border-blue;
+            }
+        }
+
+        &:nth-child(3) {
+            &::before {
+                @apply right-0 border-black;
+            }
+        }
+    }
+
+    th {
+        &:not(:first-child) {
+            &::before {
+                @apply border-t rounded-t-2xl;
+            }
+        }
+
+        &:nth-child(2) {
+            &::before {
+                @apply bg-blue;
+            }
+        }
+
+        &:nth-child(3) {
+            &::before {
+                @apply bg-black;
+            }
+        }
+    }
+
+    tbody {
+        td {
+            &:first-child {
+                @apply uppercase;
+            }
+        }
+
+        tr {
+            &:last-child {
+                td {
+                    &:not(:first-child) {
+                        &::before {
+                            @apply border-b rounded-b-2xl;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.approach-features-list {
+    @apply w-full;
+
+    li {
+        @apply min-h-16.5 flex items-center w-full;
+
+        &:first-child {
+            @apply uppercase text-md text-white text-center justify-center;
+        }
+    }
+
+    &.header {
+        li {
+            @apply uppercase text-md;
+        }
+    }
+
+    &.other,
+    &.us {
+        @apply relative rounded-2xl;
+
+        span {
+            @apply relative;
+        }
+
+        &::before {
+            content: '';
+            @apply absolute bottom-px left-px bg-white rounded-b-2xl;
+            width: calc(100% - 2px);
+            height: calc(100% - 67px);
+        }
+
+        li {
+            @apply px-9 px-5;
+        }
+    }
+}

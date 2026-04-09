@@ -1,0 +1,15 @@
+@theme {
+    --radius-5xl: 2.75rem;
+    --radius-6xl: 3.5rem;
+    --radius-7xl: 4rem;
+
+    --spacing-15: 3.75rem;
+    --spacing-16.5: 4.125rem;
+    --spacing-19: 4.75rem;
+    --spacing-22.5: 5.625rem;
+    --spacing-32: 8rem;
+
+
+    --snowflake-list-marker: "❋"
+
+}

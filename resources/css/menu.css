@@ -1,0 +1,103 @@
+.menu {
+    li {
+        &:not(:last-child) {
+            &::after {
+                content: "/";
+                @apply inline-block px-4 opacity-40;
+            }
+        }
+
+    }
+}
+
+
+
+.header-menu-wrapper {
+    &.active {
+        .menu-toggle {
+            span {
+                &:nth-child(1) {
+                    @apply w-full -rotate-135 translate-y-2;
+                }
+
+                &:nth-child(2) {
+                    @apply w-1/2 scale-0 origin-left;
+                }
+
+                &:nth-child(3) {
+                    @apply w-full rotate-135 -translate-y-2;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: theme('screens.md')) {
+    .menu-toggle {
+        @apply flex flex-col items-end justify-between relative cursor-pointer h-4.5 w-7;
+
+        span {
+            @apply h-0.5 bg-black transition-all duration-300 ease-in-out;
+
+            &:nth-child(1) {
+                @apply w-full;
+            }
+
+            &:nth-child(2) {
+                @apply w-2/5;
+            }
+
+            &:nth-child(3) {
+                @apply w-3/4;
+            }
+        }
+    }
+
+    .header-menu {
+        @apply absolute w-screen h-screen bg-white z-10 top-0 -left-10 transition-all duration-300 ease-in-out;
+        @apply px-10 py-40;
+        @apply -translate-y-full opacity-0;
+    }
+
+    .header-menu-wrapper {
+        &.active {
+            .header-menu {
+                @apply translate-y-0 opacity-100;
+            }
+        }
+    }
+
+    .menu {
+        li {
+            &:not(:last-child) {
+                @apply flex flex-col items-center justify-center;
+
+                &::after {
+                    content: "/";
+                    @apply px-0 py-4;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: theme('screens.sm')) {
+    .header-menu {
+        @apply -left-4 pt-30 pb-10;
+    }
+}
+
+@media screen and (max-width: theme('screens.xs')) {
+    .menu {
+        li {
+            &:not(:last-child) {
+                &::after {
+                    content: "/";
+                    @apply py-3;
+                }
+            }
+
+        }
+    }
+}

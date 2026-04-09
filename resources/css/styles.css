@@ -1,0 +1,83 @@
+body {
+    @apply font-modernist text-base;
+}
+
+.main-container {
+    @apply px-10 w-full mx-auto relative;
+    max-width: 1440px;
+}
+
+.bg-gradient-block {
+    @apply relative;
+}
+
+.bg-gradient {
+    @apply absolute w-full h-full left-0 top-0 rounded-7xl pointer-events-none;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 500px, rgba(0, 0, 0, 0) 600px),
+        linear-gradient(to top, rgba(0, 0, 0, 1) 500px, rgba(0, 0, 0, 0) 600px);
+    filter: blur(1px);
+
+    &::before {
+        content: "";
+        @apply absolute w-full h-full left-0 top-0 rounded-7xl;
+        background: linear-gradient(145deg, rgba(66, 103, 255, 0.07) 10%, rgba(255, 115, 237, 0.07) 28%, rgba(255, 75, 62, 0.07) 43%, rgba(255, 168, 66, 0.07) 61%, rgba(255, 115, 237, 0.07) 85%);
+    }
+}
+
+.gradient-block-bg {
+    background: linear-gradient(110deg, #FEB562 10%, #F11680 55%, #8C2EFF 90%);
+}
+
+.snowflake-list {
+    list-style-type: var(--snowflake-list-marker);
+    @apply pl-4;
+
+    li {
+        @apply pl-1;
+    }
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.z-3 {
+    z-index: 3;
+}
+
+.z-4 {
+    z-index: 4;
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+.z-6 {
+    z-index: 6;
+}
+
+
+@media screen and (max-width: theme('screens.smd')) {
+    .main-container {
+        @apply px-6;
+    }
+
+    .bg-gradient {
+        @apply rounded-4xl;
+
+        &::before {
+            @apply rounded-4xl;
+        }
+    }
+}
+
+@media screen and (max-width: theme('screens.sm')) {
+    .main-container {
+        @apply px-4;
+    }
+}

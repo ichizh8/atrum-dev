@@ -1,0 +1,80 @@
+h1,
+.h1 {
+    @apply text-3xl font-bold tracking-tighter;
+}
+
+h2,
+.h2 {
+    @apply text-3xl tracking-tighter;
+}
+
+h3,
+.h3 {
+    @apply text-2xl font-bold;
+}
+
+h4,
+.h4 {
+    @apply text-xl font-bold;
+}
+
+h5,
+.h5 {
+    @apply text-lg font-bold;
+}
+
+h6,
+.h6 {
+    @apply text-md;
+}
+
+.number {
+    @apply text-xl font-light;
+}
+
+@media screen and (max-width: theme('screens.sm')) {
+    body {
+        @apply text-base-sm;
+    }
+
+    h1,
+    .h1 {
+        @apply text-3xl-sm;
+    }
+
+    h2,
+    .h2 {
+        @apply text-3xl-sm;
+    }
+
+    h3,
+    .h3 {
+        @apply text-2xl-sm;
+    }
+
+    h4,
+    .h4 {
+        @apply text-xl-sm;
+    }
+
+    h5,
+    .h5 {
+        @apply text-lg-sm;
+    }
+
+    h6,
+    .h6 {
+        @apply text-md-sm;
+    }
+
+    .number {
+        @apply text-lg-sm;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(110deg, #FEB562 10%, #F11680 55%, #8C2EFF 90%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}

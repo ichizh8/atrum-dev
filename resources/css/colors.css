@@ -1,0 +1,10 @@
+@theme {
+    --color-black: rgb(47, 47, 47);
+
+    --color-gray: rgb(158, 158, 158);
+
+    --color-white: rgb(255, 255, 255);
+
+    --color-blue: rgb(134, 158, 255);
+    --color-blue-light: rgb(247, 247, 252);
+}

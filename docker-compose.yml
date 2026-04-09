@@ -1,0 +1,93 @@
+services:
+  atrum-dev-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: atrum-dev-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+      - ./vendor:/var/www/vendor
+      - ./node_modules:/var/www/node_modules
+    networks:
+      - atrum-dev-network
+    environment:
+      - DB_HOST=atrum-dev-db
+      - DB_PORT=3306
+      - DB_DATABASE=${DB_DATABASE:-atrum}
+      - DB_USERNAME=${DB_USERNAME:-atrum}
+      - DB_PASSWORD=${DB_PASSWORD:-secret}
+    depends_on:
+      - atrum-dev-db
+
+  atrum-dev-webserver:
+    image: nginx:alpine
+    container_name: atrum-dev-webserver
+    restart: unless-stopped
+    ports:
+      - "5100:80"
+    volumes:
+      - .:/var/www
+      - ./docker/nginx:/etc/nginx/conf.d
+    networks:
+      - atrum-dev-network
+    depends_on:
+      - atrum-dev-app
+
+  atrum-dev-db:
+    image: mysql:8.0
+    container_name: atrum-dev-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-atrum}
+      MYSQL_USER: ${DB_USERNAME:-atrum}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-secret}
+    volumes:
+      - atrum-dev-mysql:/var/lib/mysql
+    ports:
+      - "3310:3306"
+    networks:
+      - atrum-dev-network
+
+  atrum-dev-phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: atrum-dev-phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: atrum-dev-db
+      PMA_USER: ${DB_USERNAME:-atrum}
+      PMA_PASSWORD: ${DB_PASSWORD:-secret}
+      UPLOAD_LIMIT: 300M
+    depends_on:
+      - atrum-dev-db
+    ports:
+      - "5108:80"
+    networks:
+      - atrum-dev-network
+
+  atrum-dev-node:
+    image: node:20
+    container_name: atrum-dev-node
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+      - ./node_modules:/var/www/node_modules
+    environment:
+      - VITE_PORT=${VITE_PORT:-5101}
+    networks:
+      - atrum-dev-network
+    ports:
+      - "5101:5101"
+    stdin_open: true
+    tty: true
+
+networks:
+  atrum-dev-network:
+    driver: bridge
+
+volumes:
+  atrum-dev-mysql:
+    driver: local

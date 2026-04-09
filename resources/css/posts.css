@@ -1,0 +1,15 @@
+.posts-grid {
+    &:hover {
+        .post-item {
+            filter: blur(4px);
+        }
+    }
+}
+
+.post-item {
+    @apply transition-all duration-300 ease-in-out;
+
+    &:hover {
+        filter: blur(0px) !important;
+    }
+}

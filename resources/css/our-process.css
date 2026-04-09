@@ -1,0 +1,49 @@
+.our-process-item {
+    &:not(:last-child) {
+        .our-process-content {
+            @apply pb-19;
+        }
+
+    }
+
+    &:not(:first-child) {
+        .our-process-number {
+            @apply relative;
+
+            &::before {
+                content: "";
+                @apply absolute w-0.5 h-200 left-1/2 bottom-full -z-10;
+                background: linear-gradient(110deg, #FEB562 10%, #F11680 55%, #8C2EFF 90%);
+            }
+        }
+    }
+
+}
+
+.our-process-number {
+    @apply flex items-center justify-center bg-white;
+    @apply w-15 h-15 rounded-full;
+}
+
+@media screen and (max-width: theme('screens.sm')) {
+    .our-process-number {
+        @apply w-11 h-11;
+    }
+
+    .our-process-item {
+        &:not(:last-child) {
+            .our-process-content {
+                @apply pb-6;
+            }
+
+        }
+
+        &:not(:first-child) {
+            .our-process-number {
+                &::before {
+                    @apply w-px;
+                }
+            }
+        }
+    }
+}
