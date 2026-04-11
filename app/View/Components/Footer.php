@@ -74,7 +74,7 @@ class Footer extends Component
             ],
             [
                 'label' => 'Privacy Policy',
-                'url' => '#'
+                'url' => route('privacy-policy')
             ]
         ];
 

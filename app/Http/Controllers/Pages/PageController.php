@@ -9,4 +9,9 @@ class PageController extends Controller
     {
         return view('pages.home');
     }
+
+    public function privacyPolicy()
+    {
+        return view('pages.privacy-policy');
+    }
 }

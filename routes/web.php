@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['web'])->group(function () {
     Route::get('/', [PageController::class, 'home'])->name('home');
+    Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacy-policy');
 });
 
 // Route::group(['prefix' => 'test-page'], function () {
