@@ -7,6 +7,14 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 document.fonts.ready.then(() => {
 
+    // On mobile (<768px) ScrollTrigger doesn't fire reliably — skip all GSAP
+    // animations so elements don't get stuck invisible at their "from" state.
+    // Just restore the CSS-hidden an_text-appear elements and bail out.
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        gsap.set(".an_text-appear", { opacity: 1 });
+        return;
+    }
+
     gsap.set(".an_text-appear", { opacity: 1 });
 
     const textAppearTriggers = document.querySelectorAll('.an_text-appear');
