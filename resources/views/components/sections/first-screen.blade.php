@@ -2,15 +2,15 @@
     <x-container>
         <div class="grid grid-cols-9 gap-4 mb-15 max-sm:mb-5">
             <div class="col-span-9 sm:relative">
-                <div class="absolute -bottom-10 right-0 max-smd:-translate-y-1/2 max-smd:translate-x-1/2 max-sm:w-45 max-sm:bottom-0 max-sm:-translate-y-8/10 max-sm:translate-x-1/2">
+                <div class="absolute -bottom-10 right-0 max-smd:-translate-y-1/2 max-smd:translate-x-1/2 max-sm:hidden">
                     <div><img class="max-w-full an_slide-in" data-delay="2.3" data-direction="top" src="{{ asset('images/shapes/3d-item-1.png') }}" alt="" /></div>
                 </div>
                 <h1 class="relative">AI that actually ships,<br />for companies that<br /><span class="gradient-text">actually ship things.</span></h1>
             </div>
         </div>
         <div class="grid grid-cols-9 gap-4 items-center">
-            <div class="col-span-4 max-sm:order-2 max-sm:col-span-9 relative">
-                <div class="max-sm:absolute max-sm:w-65 left-0 top-0 max-sm:-translate-x-1/2 max-sm:-translate-y-1/2">
+            <div class="col-span-4 max-sm:hidden">
+                <div class="left-0 top-0">
                     <div><img class="max-w-full an_slide-in" data-delay="2.3" data-direction="bottom" src="{{ asset('images/shapes/3d-item-2.png') }}" alt=""></div>
                 </div>
             </div>
@@ -20,15 +20,12 @@
                     <p>For mid-market manufacturers, distributors, service providers, and e-commerce teams that have data they aren't using. Building agents and AI workflows since 2021.</p>
                 </div>
                 <div class="flex items-center gap-x-4 gap-y-5 flex-wrap max-sm:justify-center">
-                    <div class="an_zoom-appear" data-delay="1.8">
+                    <div>
                         <x-btn click="Livewire.dispatch('openModal', { component: 'modals.contact-us' })">Start a conversation</x-btn>
                     </div>
-                    <div class="an_zoom-appear" data-delay="1.9">
+                    <div>
                         <x-btn href="#our-process" variant="secondary">See how we work</x-btn>
                     </div>
-                </div>
-                <div class="mt-10 an_opacity-in" data-delay="2.2">
-                    <p class="text-black/50 text-sm">Building AI workflows and agents since 2021. Before it was a trend.</p>
                 </div>
             </div>
         </div>
