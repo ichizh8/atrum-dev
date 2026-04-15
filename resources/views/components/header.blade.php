@@ -56,7 +56,7 @@
                         @endforeach
                     </ul>
                 </nav>
-                <x-btn click="Livewire.dispatch('openModal', { component: 'modals.contact-us' })">Let’s Build Something That Lasts</x-btn>
+                <x-btn click="Livewire.dispatch('openModal', { component: 'modals.contact-us' })">Start a conversation</x-btn>
             </div>
         </div>
     </x-container>
