@@ -1,5 +1,5 @@
 <x-layout>
-    <x-sections.first-screen class="pt-20" />
+    <x-sections.first-screen class="pt-20 overflow-x-hidden" />
 
     <x-sections.features-grid class="pt-39 pb-50 max-sm:pb-39" />
 
@@ -17,5 +17,5 @@
 
     </x-visuals.gradient-bg-container>
 
-    <x-sections.start-project class="relative py-65 max-sm:py-50" />
+    <x-sections.start-project class="relative py-65 max-sm:py-50 overflow-hidden" />
 </x-layout>

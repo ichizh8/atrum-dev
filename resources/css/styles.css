@@ -1,5 +1,5 @@
 body {
-    @apply font-modernist text-base;
+    @apply font-modernist text-base overflow-x-hidden;
 }
 
 .main-container {
@@ -8,7 +8,7 @@ body {
 }
 
 .bg-gradient-block {
-    @apply relative;
+    @apply relative overflow-hidden;
 }
 
 .bg-gradient {
