@@ -18,30 +18,18 @@ class WhatWeDo extends SectionComponent
         $items = [
             [
                 'image' => 'what-we-do-1.png',
-                'title' => 'System Architecture & AI Integration',
-                'list' => [
-                    'Full-stack web and mobile development, designed to handle what comes after launch',
-                    'API design and third-party integrations, documented so the next team can read them',
-                    'AI module integration, from LLM pipelines to multi-agent orchestration to features that actually solve real problems',
-                ]
+                'title' => 'Agent systems that run your workflows.',
+                'description' => 'Multi-agent pipelines that handle the tedious, high-volume work your team keeps putting off.',
             ],
             [
                 'image' => 'what-we-do-2.png',
-                'title' => 'UX Research & Design',
-                'list' => [
-                    'User behavior research, cognitive bias analysis, interaction pattern mapping',
-                    'Information architecture, wireframing, interaction design',
-                    'Usability testing with real users, then iterating based on what we actually find',
-                ]
+                'title' => 'Marketing and sales intelligence from your own data.',
+                'description' => 'Lead scoring, customer segmentation, and content generation grounded in your CRM. Not a generic LLM guess.',
             ],
             [
                 'image' => 'what-we-do-3.png',
-                'title' => 'Data & Performance Intelligence',
-                'list' => [
-                    'Analytics infrastructure, event tracking, data warehousing',
-                    'Custom dashboards and reporting pipelines, updated in real time',
-                    'Pattern recognition and business intelligence for companies that never had access to this kind of tooling',
-                ]
+                'title' => 'Data infrastructure for teams without a data team.',
+                'description' => 'Analytics, dashboards, event tracking, and the plumbing underneath, built so you can answer your own questions.',
             ],
         ];
         return view('components.sections.what-we-do', compact('items'));

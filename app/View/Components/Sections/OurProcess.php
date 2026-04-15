@@ -17,33 +17,20 @@ class OurProcess extends SectionComponent
     {
         $steps = [
             [
-                'title' => 'Discovery & Research',
-                'list' => [
-                    'User behavior analysis, market fit, stakeholder alignment',
-                    'UX audit of what exists and figuring out where things break down',
-                ]
+                'title' => 'Discovery Sprint',
+                'duration' => 'Three weeks',
+                'description' => 'We map your data, your workflows, and the highest-leverage AI opportunity. You get a working prototype and an implementation plan. You leave with clarity, whether or not you continue with us.',
             ],
             [
-                'title' => 'Architecture & AI Planning',
-                'list' => [
-                    'System design with scalability and security built in from the beginning',
-                    'Deciding what gets handled by AI and what needs a person',
-                ]
+                'title' => 'Embedded Quarter',
+                'duration' => 'Twelve weeks',
+                'description' => 'We embed two to three people with your team. We build, your team learns. At the end you have production AI systems and people who know how to maintain them.',
             ],
             [
-                'title' => 'Build with Review Loops',
-                'list' => [
-                    'Development with code reviews and AI output auditing throughout',
-                    'Security checks happen before code merges. Always.',
-                ]
+                'title' => 'Ongoing Partnership',
+                'duration' => 'Retainer',
+                'description' => 'We stay on after the embed as a fractional AI team. Weekly sessions, async ownership, a ticket queue your team can push into.',
             ],
-            [
-                'title' => 'Measure and Iterate',
-                'list' => [
-                    'Analytics and performance baselines running from launch day',
-                    'Post-launch monitoring, documented handoff, systems that keep working after we leave',
-                ]
-            ]
         ];
 
         return view('components.sections.our-process', compact('steps'));
