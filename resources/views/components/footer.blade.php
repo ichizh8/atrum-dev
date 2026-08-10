@@ -62,7 +62,7 @@
         <div class="border-t border-black/20">
             <x-container>
                 <div class="py-5 flex items-center justify-between max-sm:flex-col max-sm:py-4">
-                    <div class="text-black/40 max-sm:text-center max-sm:order-2 max-sm:mt-1">© {{ date('Y') }} Atrum Agency — All Rights Reserved</div>
+                    <div class="text-black/40 max-sm:text-center max-sm:order-2 max-sm:mt-1">© {{ date('Y') }} Atrum LLC — All Rights Reserved</div>
                     <nav class="max-sm:w-full">
                         <ul class="flex items-center gap-4 max-sm:justify-between">
                             @foreach ($siteinfo as $item)
