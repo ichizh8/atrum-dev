@@ -4,13 +4,13 @@
 
             <h1 class="mb-10 max-sm:mb-6">Privacy Policy</h1>
 
-            <p class="text-black/50 mb-10 max-sm:mb-6">Last updated: {{ date('F j, Y') }}</p>
+            <p class="text-black/50 mb-10 max-sm:mb-6">Last updated: August 9, 2026</p>
 
             <div class="prose-content">
 
                 <h2 class="mb-4 mt-10 max-sm:mt-6">1. Who We Are</h2>
-                <p class="text-black/70 mb-6">Atrum is a web development and AI automation agency. We help businesses build fast, intelligent digital products. Our contact email is <a href="mailto:hello@atrum.dev" class="text-black underline hover:text-black/60 transition-colors duration-200">hello@atrum.dev</a>.</p>
-                <p class="text-black/70 mb-6">We are based in Switzerland and process personal data in accordance with the Swiss Federal Act on Data Protection (FADP — Bundesgesetz über den Datenschutz, DSG).</p>
+                <p class="text-black/70 mb-6">Atrum LLC is a Colorado limited liability company providing web development and AI automation services. Our contact email is <a href="mailto:hello@atrum.dev" class="text-black underline hover:text-black/60 transition-colors duration-200">hello@atrum.dev</a>.</p>
+                <p class="text-black/70 mb-6">We are based in Colorado, United States. This policy explains how Atrum LLC collects, uses, stores, and protects personal information submitted through this website.</p>
 
                 <h2 class="mb-4 mt-10 max-sm:mt-6">2. What Data We Collect</h2>
                 <p class="text-black/70 mb-4">We only collect personal data that you voluntarily provide through our contact form. This includes:</p>
@@ -41,7 +41,7 @@
                 <p class="text-black/70 mb-6">We do not sell, rent, or share your personal data with any third parties. Your information stays with us.</p>
 
                 <h2 class="mb-4 mt-10 max-sm:mt-6">7. Your Rights</h2>
-                <p class="text-black/70 mb-4">Under the Swiss FADP, you have the right to:</p>
+                <p class="text-black/70 mb-4">Depending on where you live, applicable privacy law may give you the right to:</p>
                 <ul class="list-disc pl-6 mb-6 text-black/70 space-y-2">
                     <li>Request access to the personal data we hold about you</li>
                     <li>Request correction of inaccurate data</li>
